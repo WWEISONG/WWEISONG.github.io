@@ -6,3 +6,178 @@ redirect_from:
   - /about.html
 ---
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wei Song</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+            padding-top: 35px;
+        }
+        .left-column {
+            flex: 0 0 30%;
+            padding-right: 20px;
+            text-align: center;
+        }
+        .right-column {
+            flex: 1;
+        }
+        .profile-pic {
+            width: 150px;
+            border-radius: 50%;
+        }
+        .contact-info {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .contact-info p {
+            font-size: 16px;
+            margin-bottom: 0px;
+        }
+        .contact-info .links {
+            display: inline-block;
+            margin-top: 0px;
+        }
+        .contact-info a {
+            text-decoration: none;
+            color: #0066cc;
+            font-size: 16px;
+            margin: 0px;
+        }
+        .contact-info a::before {
+            content: "|";
+            margin-right: 2px;
+        }
+        .contact-info a:first-child::before {
+            content: "";
+            margin: 0;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .news-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px;
+        }
+        .news-container h2 {
+            margin-top: 0; /* 移除顶部的margin */
+            padding-top: 0; /* 移除顶部的padding */
+        }
+        .news-item {
+            margin-bottom: 10px;
+        }
+        .news-item:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-column">
+        <img src="images/profile.jpg" alt="Wei Song" class="profile-pic">
+        <div class="contact-info">
+          <p>wei.song1@unsw.edu.au</p>
+          <div class="links">
+              <a href="https://scholar.google.com">Google Scholar</a>
+              <a href="https://linkedin.com">LinkedIn</a>
+          </div>
+      </div>
+    </div>
+    <div class="right-column">
+        <h1>Wei Song</h1>
+        <p>Research Fellow<br>University of New South Wales</p>
+        
+        <div class="section">
+            <p>I am a .</p>
+            <p>My research ...</p>
+        </div>
+    </div>
+</div>
+
+<div id="news" class="news-container">
+    <h2>News!</h2>
+    <div class="news-item">
+        <p>News 1</p>
+    </div>
+    <div class="news-item">
+        <p>News 1</p>
+    </div>
+    <div class="news-item">
+        <p>News 1</p>
+    </div>
+    <div class="news-item">
+        <p>News 1</p>
+    </div>
+    <div class="news-item">
+        <p>News 1</p>
+    </div>
+</div>
+
+<div id="hnews" class="news-container">
+  <h2>News!</h2>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+</div>
+
+<div id="hnews" class="news-container">
+  <h2>News!</h2>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+  <div class="news-item">
+      <p>News 1</p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+          });
+      });
+  });
+</script>
+
+</body>
+</html>
