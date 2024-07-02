@@ -12,7 +12,7 @@ title                    : "Wei Song / Site Title"
 title_separator          : "-"
 name                     : &name "Wei Song"
 description              : &description "personal description"
-url                      : https://weisong.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://WWEISONG.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "WWEISONG/WWEISONG.github.io"
 
@@ -21,8 +21,8 @@ repository               : "WWEISONG/WWEISONG.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "profile.jpg"
+  name             : "Wei Song"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Earth"
