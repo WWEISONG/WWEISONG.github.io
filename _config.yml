@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Wei Song / Site Title"
+title                    : "Wei Song"
 title_separator          : "-"
 name                     : &name "Wei Song"
 description              : &description "personal description"
@@ -22,7 +22,7 @@ repository               : "WWEISONG/WWEISONG.github.io"
 author:
   # Biographic information
   avatar           : "profile.jpg"
-  name             : "Wei Song"
+  # name             : "Wei Song"
   # pronouns         : # example: "she/her"  
   # bio              : "Short biography for the left-hand sidebar"
   location         : "Australia Sydney"
