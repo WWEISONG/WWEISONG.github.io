@@ -16,8 +16,6 @@ url                      : https://WWEISONG.github.io # the base hostname & prot
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "WWEISONG/WWEISONG.github.io"
 
-sidebar: false
-author_profile: false
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -225,7 +223,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: true
@@ -236,7 +234,7 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
   # # _teaching
   # - scope:
   #     path: ""
