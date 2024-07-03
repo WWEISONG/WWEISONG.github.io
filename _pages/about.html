@@ -25,7 +25,7 @@ redirect_from:
             display: flex;
             align-items: flex-start;
             padding: 20px;
-            padding-top: 35px;
+            padding-top: 45px;
         }
         .left-column {
             flex: 0 0 30%;
@@ -36,8 +36,8 @@ redirect_from:
             flex: 1;
         }
         .profile-pic {
-            width: 150px;
-            border-radius: 50%;
+            width: 160px;
+            border-radius: 100%;
         }
         .contact-info {
             text-align: center;
@@ -66,23 +66,106 @@ redirect_from:
             margin: 0;
         }
         .section {
-            margin-bottom: 20px;
+          font-size: 16px;
+          margin-bottom: 20px;
         }
         .news-container {
-            background-color: #f9f9f9;
-            padding: 20px;
             border-radius: 8px;
-            margin: 20px;
+        }
+        .news-container ul {
+            padding-left: 15px;
+        }
+        .news-container li {
+            font-size: 16px;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+        .experience-container {
+            border-radius: 8px;
+        }
+        .experience-container ul {
+            padding-left: 15px;
+        }
+        .experience-container li {
+            font-size: 16px;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+        .subsection h3 {
+          font-size: 16px;
+          margin-top: 5px;
+        }
+
+        .subsection ul {
+          padding-left: 15px;
+        }
+
+        .subsection li {
+          font-size: 16px;
+          margin-bottom: 5px;
+          line-height: 1.2;
         }
         .news-container h2 {
-            margin-top: 0; /* 移除顶部的margin */
-            padding-top: 0; /* 移除顶部的padding */
+            margin-top: 0;
+            padding-top: 0;
         }
         .news-item {
-            margin-bottom: 10px;
+            font-size: 16px;
+            margin-bottom: 0px;
+            line-height: 0.5;
         }
         .news-item:last-child {
             margin-bottom: 0;
+        }
+        .teaching-container {
+            border-radius: 8px;
+        }
+        .teaching-item {
+          font-size: 16px;
+          margin-bottom: 0px;
+          line-height: 0.5;
+        }
+        .teaching-container ul {
+            padding-left: 15px;
+        }
+        .teaching-container li {
+            font-size: 16px;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+        .publication-container {
+            border-radius: 8px;
+        }
+        .publication-item {
+          display: flex;
+          align-items: flex-start;
+          font-size: 16px;
+          margin-bottom: 15px;
+        }
+        .publication-last-item {
+          display: flex;
+          align-items: flex-start;
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+        .publication-image {
+          width: 300px;
+          height: auto;
+          margin-right: 10px;
+          margin-left: 0px;
+          border-radius: 0px;
+        }
+        .publication-conference {
+          margin: 0;
+          line-height: 1.5;
+          color: #0055aa; 深蓝色字体
+        }
+        .publication-details p {
+          margin: 0;
+          line-height: 1.5;
+        }
+        .publication-details p + p {
+          margin-top: 10px;
         }
     </style>
 </head>
@@ -94,78 +177,122 @@ redirect_from:
         <div class="contact-info">
           <p>wei.song1@unsw.edu.au</p>
           <div class="links">
-              <a href="https://scholar.google.com">Google Scholar</a>
-              <a href="https://linkedin.com">LinkedIn</a>
+              <a href="https://scholar.google.com.au/citations?hl=en&user=HrA4BoYAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+              <a href="https://www.linkedin.com/in/wei-song-8956a9b3/">LinkedIn</a>
           </div>
       </div>
     </div>
     <div class="right-column">
         <h1>Wei Song</h1>
-        <p>Research Fellow<br>University of New South Wales</p>
-        
         <div class="section">
-            <p>I am a .</p>
-            <p>My research ...</p>
+            <p>I am a fourth-year PhD student in Compiler Optimization Research Group (CORG) at Computer Science and Engineering school 
+            of UNSW Sydney (UNSW/CSE), supervised by <a href="https://www.cse.unsw.edu.au/~jingling/">Scientia Professor Jingling Xue</a> and 
+            <a href="https://yuleisui.github.io/">Scientia Associate Professor Yulei Sui</a>.
+            Before joining CORG, I received my Master in Information Technology at UNSW/CSE. My research interests lie at the adversarial attacks/defenses 
+            in AI, and security in IoT Systems.
+            </p>
         </div>
     </div>
 </div>
 
 <div id="news" class="news-container">
-    <h2>News!</h2>
-    <div class="news-item">
-        <p>News 1</p>
-    </div>
-    <div class="news-item">
-        <p>News 1</p>
-    </div>
-    <div class="news-item">
-        <p>News 1</p>
-    </div>
-    <div class="news-item">
-        <p>News 1</p>
-    </div>
-    <div class="news-item">
-        <p>News 1</p>
-    </div>
+    <h2>News</h2>
+    <ul>
+      <li>[06/2024] My first work on adversarial attacks/defense in AI has been accepted by <strong>USENIX Security 2024</strong>.</li>
+      <li>[03/2024] One paper "VibMilk: Non-Intrusive Milk Spoilage Detection via Smartphone Vibration" has been accepted by <strong>IEEE IoTJ 2024</strong>. </li>
+      <li>[01/2024] One paper "CAvatar: Real-time Human Activity Mesh Reconstruction via Tactile Carpets" has been accepted by <strong>IMWUT/UbiComp 2024</strong>. </li>
+    </ul>
 </div>
 
-<div id="hnews" class="news-container">
-  <h2>News!</h2>
-  <div class="news-item">
-      <p>News 1</p>
+<div id="publications" class="publication-container">
+  <h2>Publications</h2>
+  <div class="publication-item">
+    <img src="publication_images/SecVID.jpg" alt="Publication Image" class="publication-image">
+    <div class="publication-details">
+      <p><strong>Correction-based Defense Against Adversarial Video Attacks via
+        Discretization-Enhanced Video Compressive Sensing</strong></p>
+      <p><strong>Wei Song</strong>; Cong Cong; Haonan Zhong; Jingling Xue</p>
+      <p class="publication-conference"><strong>USENIX Security (2024)</strong> <a href="link-to-paper">[Paper]</a></p>
+    </div>
   </div>
-  <div class="news-item">
-      <p>News 1</p>
+
+  <div class="publication-item">
+    <img src="publication_images/VibMilk.jpg" alt="Publication Image" class="publication-image">
+    <div class="publication-details">
+      <p><strong>VibMilk: Non-Intrusive Milk Spoilage Detection via Smartphone Vibration</strong></p>
+      <p>Yuezhong Wu; <strong>Wei Song</strong>; Yanxiang Wang; Dong Ma; Wen Hu</p>
+      <p class="publication-conference"><strong>IEEE IoTJ (2024)</strong> <a href="https://ieeexplore.ieee.org/abstract/document/10422771">[Paper]</a></p>
+    </div>
   </div>
-  <div class="news-item">
-      <p>News 1</p>
+
+  <div class="publication-item">
+    <img src="publication_images/VIBE.jpg" alt="Publication Image" class="publication-image">
+    <div class="publication-details">
+      <p><strong>CAvatar: Real-time Human Activity Mesh Reconstruction via Tactile Carpets</strong></p>
+      <p>Wenqiang Chen; Yexin Hu; <strong>Wei Song</strong>; Yingcheng Liu; Antonio Torralba; Wojciech Matusik</p>
+      <p class="publication-conference"><strong>IMWUT/UbiComp (2024)</strong> <a href="https://dl.acm.org/doi/abs/10.1145/3631424">[Paper]</a></p>
+    </div>
   </div>
-  <div class="news-item">
-      <p>News 1</p>
+
+  <div class="publication-last-item">
+    <img src="publication_images/Pistis.jpg" alt="Publication Image" class="publication-image">
+    <div class="publication-details">
+      <p><strong>Pistis: Replay Attack and Liveness Detection for Gait-Based User Authentication System on Wearable Devices Using Vibration</strong></p>
+      <p><strong>Wei Song</strong>; Hong Jia; Min Wang; Yuezhong Wu; Wanli Xue; Chun Tung Chou; Jiankun Hu; Wen Hu</p>
+      <p class="publication-conference"><strong>IEEE IoTJ (2022)</strong> <a href="https://ieeexplore.ieee.org/abstract/document/9996544">[Paper]</a></p>
+    </div>
   </div>
-  <div class="news-item">
-      <p>News 1</p>
+
+</div>
+
+
+<!-- <div id="teaching" class="teaching-container">
+  <h2>Teaching</h2>
+  <ul>
+    <li>Academic tutor, COMP3331/9331 Computer Networks, UNSW, 2019-2024</li>
+    <li>Academic tutor, COMP9444 Deep Neural Networks, UNSW, 2022</li>
+    <li>Academic tutor, COMP4336/9336 Mobile Data Networking, UNSW, 2021</li>
+    <li>Academic tutor, COMP4337/9337 Securing Wireless and Wireless Networks, UNSW, 2021</li>
+    <li>Academic tutor, COMP6733 Internet of Things, UNSW, 2021</li>
+  </ul>
+</div> -->
+
+<div id="experience" class="experience-container">
+  <h2>Experience</h2>
+
+  <div class="subsection">
+    <h3>Professional Experience</h3>
+    <ul>
+      <li>Jan 2022 - May 2022, Software Engineer, <a href="https://parkingspotz.com/">Parking Spotz</a><br>
+          Mentor: Prof. <a href="https://research.unsw.edu.au/people/professor-wen-hu">Wen Hu</a>
+      </li>
+      <li>Dec 2020 - May 2021, Student Research Assistant, UNSW Cyber Security Cooperative Research Center <br>
+          Supervisor: Prof. <a href="https://www.unsw.edu.au/staff/salil-kanhere">Salil Kanhere</a> and Prof. <a href="https://sites.google.com/view/profsanjayjha">Sanjay Jha</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h3>Teaching</h3>
+    <ul>
+      <li>Academic tutor, COMP3331/9331 Computer Networks, UNSW, 2019-2024</li>
+      <li>Academic tutor, COMP9444 Deep Neural Networks, UNSW, 2022</li>
+      <li>Academic tutor, COMP4336/9336 Mobile Data Networking, UNSW, 2021</li>
+      <li>Academic tutor, COMP4337/9337 Securing Wireless and Wireless Networks, UNSW, 2021</li>
+      <li>Academic tutor, COMP6733 Internet of Things, UNSW, 2021</li>
+    </ul>
+  </div>
+
+  <div class="subsection">
+    <h3>Service</h3>
+    <ul>
+      <li>2023 Reviewer: ACM SIGCOMM, IoTDI, ACM MobiSys, IEEE/ACM ASE</li>
+      <li>2022 Reviewer: IPSN, ACM Sensys</li>
+      <li>2021 Reviewer: ACM Sensys</li>
+    </ul>
   </div>
 </div>
 
-<div id="hnews" class="news-container">
-  <h2>News!</h2>
-  <div class="news-item">
-      <p>News 1</p>
-  </div>
-  <div class="news-item">
-      <p>News 1</p>
-  </div>
-  <div class="news-item">
-      <p>News 1</p>
-  </div>
-  <div class="news-item">
-      <p>News 1</p>
-  </div>
-  <div class="news-item">
-      <p>News 1</p>
-  </div>
-</div>
 
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
