@@ -73,13 +73,38 @@ redirect_from:
         .news-container {
             border-radius: 8px;
         }
+        .news-scrollable {
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .news-scrollable::-webkit-scrollbar {
+            width: 8px;
+        }
+        .news-scrollable::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        .news-scrollable::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        .news-scrollable::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
         .news-container ul {
             padding-left: 15px;
+            margin: 0;
         }
         .news-container li {
             font-size: 16px;
-            margin-bottom: 5px;
-            line-height: 1.2;
+            margin-bottom: 8px;
+            line-height: 1.5;
+            padding-right: 10px;
         }
         .experience-container {
             border-radius: 8px;
@@ -164,7 +189,7 @@ redirect_from:
           margin-top: 30px;
           margin-bottom: 15px;
           padding-bottom: 8px;
-          border-bottom: 2px solid #ddd;
+          border-bottom: 1px solid #ddd;
         }
         .year-header:first-of-type {
           margin-top: 20px;
@@ -199,20 +224,23 @@ redirect_from:
 
 <div id="news" class="news-container">
     <h2>News</h2>
-    <ul>
-      <li>[01/2026] Our demo paper in CAPTCHA for modern web applications has been accepted by <strong>WWW 2026</strong>.</li>
-      <li>[11/2025] Our paper in poisoning VideoLLMs has been accepted by <strong>AAAI 2026</strong>.</li>
-      <li>[07/2025] Our paper in adversarial video defense has been accepted by <strong>RAID 2025</strong>.</li>
-      <li>[06/2025] Our paper in hand biometric authentication has been accepted by <strong>IMWUT/UbiComp 2025</strong>.</li>
-      <li>[05/2025] Our paper in adversarial defense for point cloud classification has been accepted by <strong>IEEE ICRA 2025</strong>.</li>
-      <li>[06/2024] My first work on adversarial attacks/defense in AI has been accepted by <strong>USENIX Security 2024</strong>.</li>
-      <li>[03/2024] One paper "VibMilk: Non-Intrusive Milk Spoilage Detection via Smartphone Vibration" has been accepted by <strong>IEEE IoTJ 2024</strong>. </li>
-      <li>[01/2024] One paper "CAvatar: Real-time Human Activity Mesh Reconstruction via Tactile Carpets" has been accepted by <strong>IMWUT/UbiComp 2024</strong>. </li>
-    </ul>
+    <div class="news-scrollable">
+      <ul>
+        <li>[01/2026] Our demo paper in CAPTCHA for modern web applications has been accepted by <strong>WWW 2026</strong>.</li>
+        <li>[11/2025] Our paper in poisoning VideoLLMs has been accepted by <strong>AAAI 2026</strong>.</li>
+        <li>[07/2025] Our paper in adversarial video defense has been accepted by <strong>RAID 2025</strong>.</li>
+        <li>[06/2025] Our paper in hand biometric authentication has been accepted by <strong>IMWUT/UbiComp 2025</strong>.</li>
+        <li>[05/2025] Our paper in adversarial defense for point cloud classification has been accepted by <strong>IEEE ICRA 2025</strong>.</li>
+        <li>[06/2024] My first work on adversarial attacks/defense in AI has been accepted by <strong>USENIX Security 2024</strong>.</li>
+        <li>[03/2024] One paper "VibMilk: Non-Intrusive Milk Spoilage Detection via Smartphone Vibration" has been accepted by <strong>IEEE IoTJ 2024</strong>. </li>
+        <li>[01/2024] One paper "CAvatar: Real-time Human Activity Mesh Reconstruction via Tactile Carpets" has been accepted by <strong>IMWUT/UbiComp 2024</strong>. </li>
+      </ul>
+    </div>
 </div>
 
 <div id="publications" class="publication-container">
-  <h2>Research</h2>
+  <h2>Selected Publications</h2>
+  <p style="font-size: 14px; color: #666; margin-top: 5px; margin-bottom: 20px;">*Equal contribution</p>
 
   <div class="year-header">2026</div>
   <div class="publication-item">
