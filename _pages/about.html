@@ -159,7 +159,7 @@ redirect_from:
         .publication-conference {
           margin: 0;
           line-height: 1.5;
-          color: #0055aa; 深蓝色字体
+          color: #0055aa; /* 深蓝色字体 */
         }
         .publication-details p {
           margin: 0;
@@ -167,6 +167,18 @@ redirect_from:
         }
         .publication-details p + p {
           margin-top: 10px;
+        }
+        .year-header {
+          font-size: 20px;
+          font-weight: bold;
+          color: #333;
+          margin-top: 30px;
+          margin-bottom: 15px;
+          padding-bottom: 8px;
+          border-bottom: 2px solid #ddd;
+        }
+        .year-header:first-of-type {
+          margin-top: 20px;
         }
     </style>
 </head>
@@ -213,7 +225,7 @@ redirect_from:
 <div id="publications" class="publication-container">
   <h2>Research</h2>
 
-
+  <div class="year-header">2026</div>
   <div class="publication-item">
     <img src="publication_images/NGCAPTCHA.png" alt="Publication Image" class="publication-image">
     <div class="publication-details">
@@ -232,6 +244,7 @@ redirect_from:
     </div>
   </div>
 
+  <div class="year-header">2025</div>
   <div class="publication-item">
     <img src="publication_images/VidTOKEN.jpg" alt="Publication Image" class="publication-image">
     <div class="publication-details">
@@ -250,7 +263,6 @@ redirect_from:
       <p class="publication-conference"><strong>arXiv</strong> <a href="https://arxiv.org/pdf/2509.20851">[Paper]</a></p>
     </div>
   </div>
-
 
   <div class="publication-item">
     <img src="publication_images/MCP.jpg" alt="Publication Image" class="publication-image">
@@ -279,7 +291,7 @@ redirect_from:
     </div>
   </div>
 
-
+  <div class="year-header">2024</div>
   <div class="publication-item">
     <img src="publication_images/SecVID.jpg" alt="Publication Image" class="publication-image">
     <div class="publication-details">
@@ -308,6 +320,7 @@ redirect_from:
     </div>
   </div>
 
+  <div class="year-header">2022</div>
   <div class="publication-last-item">
     <img src="publication_images/Pistis.jpg" alt="Publication Image" class="publication-image">
     <div class="publication-details">
