@@ -73,23 +73,23 @@ redirect_from:
         .research-interests {
           margin-top: 15px;
           margin-bottom: 0;
+          list-style: none;
+          padding-left: 0;
         }
-        .research-tag {
-          display: inline-block;
-          background-color: #f0f4f8;
-          color: #2c3e50;
-          padding: 6px 14px;
-          margin: 5px 8px 5px 0;
-          border-radius: 20px;
-          font-size: 15px;
-          border: 1px solid #d0d9e3;
-          transition: all 0.3s ease;
+        .research-interests li {
+          font-size: 16px;
+          margin-bottom: 10px;
+          padding-left: 32px;
+          position: relative;
+          line-height: 1.6;
         }
-        .research-tag:hover {
-          background-color: #e0e8f0;
-          border-color: #a0b4c8;
-          transform: translateY(-1px);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .research-interests li .icon {
+          position: absolute;
+          left: 0;
+          top: 2px;
+          font-size: 18px;
+          width: 24px;
+          text-align: center;
         }
         .news-container {
             border-radius: 8px;
@@ -237,13 +237,13 @@ redirect_from:
               <br/>
               <br/>
             My research interests focus on <strong>AI Security</strong>, with particular emphasis on the following areas:
-            <div class="research-interests">
-              <span class="research-tag">AI watermarking for images, videos, and code</span>
-              <span class="research-tag">Adversarial video attacks and defenses</span>
-              <span class="research-tag">Security analysis for Video Large Language Models</span>
-              <span class="research-tag">Fairness for Video Large Language Models</span>
-              <span class="research-tag">AI CAPTCHA</span>
-            </div>
+            <ul class="research-interests">
+              <li><span class="icon">🔒</span>AI watermarking for images, videos, and code</li>
+              <li><span class="icon">🛡️</span>Adversarial video attacks and defenses</li>
+              <li><span class="icon">🔍</span>Security analysis for Video Large Language Models</li>
+              <li><span class="icon">⚖️</span>Fairness for Video Large Language Models</li>
+              <li><span class="icon">🤖</span>AI CAPTCHA</li>
+            </ul>
             </p>
         </div>
     </div>
