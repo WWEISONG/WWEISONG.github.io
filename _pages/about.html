@@ -160,12 +160,29 @@ h1 {
 .timeline {
   margin: 0;
   padding-left: 1rem;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 0.4rem;
 }
 
 .timeline li {
   margin-bottom: 0.52rem;
   color: #2f435c;
   line-height: 1.55;
+}
+
+.timeline::-webkit-scrollbar {
+  width: 8px;
+}
+
+.timeline::-webkit-scrollbar-track {
+  background: #eef3f9;
+  border-radius: 999px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+  background: #b8c8dc;
+  border-radius: 999px;
 }
 
 .publications .entry {
@@ -274,6 +291,11 @@ h1 {
         <li><strong>Jan 2026:</strong> NgCaptcha accepted at WWW 2026 (Demo).</li>
         <li><strong>Nov 2025:</strong> VideoLLM poisoning paper accepted at AAAI 2026.</li>
         <li><strong>Jul 2025:</strong> ViDToken accepted at RAID 2025.</li>
+        <li><strong>Jun 2025:</strong> HandID accepted at IMWUT/UbiComp 2025.</li>
+        <li><strong>May 2025:</strong> SynerGuard accepted at IEEE ICRA 2025.</li>
+        <li><strong>Jun 2024:</strong> First AI adversarial attack/defense work accepted at USENIX Security 2024.</li>
+        <li><strong>Mar 2024:</strong> VibMilk accepted at IEEE Internet of Things Journal 2024.</li>
+        <li><strong>Jan 2024:</strong> CAvatar accepted at IMWUT/UbiComp 2024.</li>
       </ul>
     </section>
   </div>
