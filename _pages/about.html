@@ -1,473 +1,268 @@
 ---
 permalink: /
-author_profile: true
-redirect_from: 
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wei Song</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        .container {
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            align-items: flex-start;
-            /* padding: 20px; */
-            padding-top: 45px;
-        }
-        .left-column {
-            flex: 0 0 25%;
-            padding-right: 10px;
-        }
-        .right-column {
-            flex: 1;
-        }
-        .profile-pic {
-            width: 160px;
-            border-radius: 100%;
-        }
-        .contact-info {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-        .contact-info p {
-            font-size: 16px;
-            margin-bottom: 0px;
-        }
-        .contact-info .links {
-            font-size: 16px;
-            display: inline-block;
-            margin-top: 0px;
-            margin-bottom: 15px;
-        }
-        .contact-info a {
-            text-decoration: none;
-            color: #0066cc;
-            font-size: 16px;
-            margin: 0px;
-        }
-        .contact-info a::before {
-            content: "|";
-            margin-right: 2px;
-        }
-        .contact-info a:first-child::before {
-            content: "";
-            margin: 0;
-        }
-        .section {
-          font-size: 16px;
-          margin-bottom: 20px;
-        }
-        .research-interests {
-          margin-top: 15px;
-          margin-bottom: 0;
-          list-style: none;
-          padding-left: 0;
-        }
-        .research-interests li {
-          font-size: 16px;
-          margin-bottom: 10px;
-          padding-left: 32px;
-          position: relative;
-          line-height: 1.6;
-        }
-        .research-interests li .icon {
-          position: absolute;
-          left: 0;
-          top: 2px;
-          font-size: 18px;
-          width: 24px;
-          text-align: center;
-        }
-        .news-container {
-            border-radius: 8px;
-        }
-        .news-scrollable {
-            max-height: 300px;
-            overflow-y: auto;
-            padding: 15px 20px;
-            background-color: #f8f9fa;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-        .news-scrollable::-webkit-scrollbar {
-            width: 8px;
-        }
-        .news-scrollable::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 4px;
-        }
-        .news-scrollable::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 4px;
-        }
-        .news-scrollable::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        .news-container ul {
-            padding-left: 15px;
-            margin: 0;
-        }
-        .news-container li {
-            font-size: 16px;
-            margin-bottom: 8px;
-            line-height: 1.5;
-            padding-right: 10px;
-        }
-        .experience-container {
-            border-radius: 8px;
-        }
-        .experience-container ul {
-            padding-left: 15px;
-        }
-        .experience-container li {
-            font-size: 16px;
-            margin-bottom: 5px;
-            line-height: 1.2;
-        }
-        .subsection h3 {
-          font-size: 18px;
-          margin-top: 5px;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-        .subsection ul {
-          padding-left: 15px;
-        }
+:root {
+  --bg: #f4f7fb;
+  --paper: #ffffff;
+  --ink: #132033;
+  --muted: #4f6078;
+  --line: #dbe5f2;
+  --brand: #0d4a85;
+  --brand-2: #00a3a3;
+  --soft: #eaf2fb;
+}
 
-        .subsection li {
-          font-size: 16px;
-          margin-bottom: 5px;
-          line-height: 1.2;
-        }
-        .news-container h2 {
-            margin-top: 0;
-            padding-top: 0;
-        }
-        .news-item {
-            font-size: 16px;
-            margin-bottom: 0px;
-            line-height: 0.5;
-        }
-        .news-item:last-child {
-            margin-bottom: 0;
-        }
-        .teaching-container {
-            border-radius: 8px;
-        }
-        .teaching-item {
-          font-size: 16px;
-          margin-bottom: 0px;
-          line-height: 0.5;
-        }
-        .teaching-container ul {
-            padding-left: 15px;
-        }
-        .teaching-container li {
-            font-size: 16px;
-            margin-bottom: 5px;
-            line-height: 1.2;
-        }
-        .publication-container {
-            border-radius: 8px;
-        }
-        .publication-item {
-          font-size: 16px;
-          margin-bottom: 15px;
-        }
-        .publication-last-item {
-          font-size: 16px;
-          margin-bottom: 5px;
-        }
-        .publication-conference {
-          margin: 0;
-          line-height: 1.5;
-          color: #0055aa; /* 深蓝色字体 */
-        }
-        .publication-details p {
-          margin: 0;
-          line-height: 1.5;
-        }
-        .publication-details p + p {
-          margin-top: 10px;
-        }
-        .publication-details sup {
-          font-size: 16px;
-          vertical-align: baseline;
-          position: relative;
-          top: -3px;
-          margin-left: 1px;
-        }
-        .year-header {
-          font-size: 20px;
-          font-weight: bold;
-          color: #333;
-          margin-top: 30px;
-          margin-bottom: 15px;
-          padding-bottom: 8px;
-          border-bottom: 1px solid #ddd;
-        }
-        .year-header:first-of-type {
-          margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
+.page__content {
+  max-width: 1120px;
+  margin: 0 auto;
+  font-family: 'Manrope', sans-serif;
+  color: var(--ink);
+}
 
-<div class="container">
-    <!-- <div class="left-column">
-        <img src="images/profile.jpg" alt="Wei Song" class="profile-pic">
-        <div class="contact-info">
-          <p>wei.song1@unsw.edu.au</p>
-          <div class="links">
-              <a href="https://scholar.google.com.au/citations?hl=en&user=HrA4BoYAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
-              <a href="https://www.linkedin.com/in/wei-song-8956a9b3/">LinkedIn</a>
-          </div>
+body {
+  background: radial-gradient(circle at 10% 10%, #eef4ff 0%, #f8fbff 45%, #f4f7fb 100%);
+}
+
+.home-wrap {
+  padding: 1rem 0 2rem;
+}
+
+.hero {
+  background: linear-gradient(130deg, #ffffff 0%, #f4fbff 55%, #eef8f8 100%);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 16px 40px rgba(12, 33, 66, 0.08);
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid #fff;
+  box-shadow: 0 12px 26px rgba(16, 58, 96, 0.2);
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.6rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.role {
+  font-size: 1.1rem;
+  color: var(--brand);
+  font-weight: 700;
+  margin-top: 0.35rem;
+}
+
+.bio {
+  margin-top: 1rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--brand);
+  border: 1px solid #c9ddf4;
+  background: #f6fbff;
+  padding: 0.42rem 0.72rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.quick-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  gap: 0.8rem;
+}
+
+.quick-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 0.8rem;
+}
+
+.quick-card strong {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--brand);
+}
+
+.section {
+  margin-top: 1.6rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.35rem 1.4rem;
+}
+
+.section h2 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.45rem;
+  margin: 0 0 1rem;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tag {
+  background: linear-gradient(120deg, #eff6ff, #ebfbfb);
+  color: #24405f;
+  border: 1px solid #d4e5fb;
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+#news ul, #experience ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+#news li, #experience li {
+  margin-bottom: 0.62rem;
+  line-height: 1.55;
+}
+
+.pub {
+  padding: 0.85rem 0;
+  border-bottom: 1px dashed #dbe4f2;
+}
+
+.pub:last-child { border-bottom: 0; }
+
+.pub-title { font-weight: 800; }
+.pub-meta { color: var(--muted); margin-top: 0.2rem; }
+.pub-venue { color: var(--brand); font-weight: 700; margin-top: 0.22rem; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero img { width: 140px; height: 140px; }
+  h1 { font-size: 2rem; }
+  .quick-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+}
+</style>
+
+<div class="home-wrap">
+  <section class="hero">
+    <img src="/images/profile.jpg" alt="Wei Song" />
+    <div>
+      <h1>Wei Song</h1>
+      <div class="role">Postdoctoral Research Fellow · UNSW Sydney</div>
+      <div class="bio">
+        I work on AI systems security, trustworthy media, and multimodal AI safety. My research focuses on adversarial robustness, video/LLM safety, and deployable security technologies for real-world systems, including critical energy infrastructure.
       </div>
-    </div> -->
-    <div class="right-column">
-        <h1>Wei Song</h1>
-        <div class="section">
-            <p>I am current a Postdoctoral Research Fellow @ UNSW, working with Prof. <a href="https://www.cse.unsw.edu.au/~jingling/">Jingling Xue</a>, Prof. <a href="https://yuleisui.github.io/">Yulei Sui</a>, Prof. <a href="https://scholar.google.com/citations?user=0vCxuH4AAAAJ&hl=en">Zhenchang Xing</a>, and Prof. <a href="https://liming-zhu.org/">Liming Zhu</a>. I received my PhD in Computer Science from UNSW Sydney, supervised by Prof. <a href="https://www.cse.unsw.edu.au/~jingling/">Jingling Xue</a>. 
-              <br/>
-              <br/>
-            My research interests focus on <strong>AI Security</strong>, with particular emphasis on the following areas:
-            <ul class="research-interests">
-              <li><span class="icon">🔒</span>AI watermarking for images, videos, and code</li>
-              <li><span class="icon">🛡️</span>Adversarial video attacks and defenses</li>
-              <li><span class="icon">🔍</span>Security analysis for Video Large Language Models</li>
-              <li><span class="icon">⚖️</span>Fairness for Video Large Language Models</li>
-              <li><span class="icon">🤖</span>AI CAPTCHA</li>
-            </ul>
-            </p>
-        </div>
+      <div class="links">
+        <a href="mailto:wei.song1@unsw.edu.au">wei.song1@unsw.edu.au</a>
+        <a href="https://scholar.google.com.au/citations?hl=en&user=HrA4BoYAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/wei-song-8956a9b3/">LinkedIn</a>
+        <a href="/CV_Wei%20SONG.pdf">CV (PDF)</a>
+      </div>
+      <div class="quick-grid">
+        <div class="quick-card"><strong>14+</strong> Publications</div>
+        <div class="quick-card"><strong>22</strong> Terms Teaching</div>
+        <div class="quick-card"><strong>2</strong> Active Grants</div>
+        <div class="quick-card"><strong>UNSW</strong> PhD (2024)</div>
+      </div>
     </div>
-</div>
+  </section>
 
-<div id="news" class="news-container">
+  <section id="research" class="section">
+    <h2>Research Interests</h2>
+    <div class="tag-list">
+      <span class="tag">AI Systems Security</span>
+      <span class="tag">Trustworthy Media</span>
+      <span class="tag">Multimodal AI Safety</span>
+      <span class="tag">Adversarial Video Attacks & Defenses</span>
+      <span class="tag">Watermarking for AI-Generated Content</span>
+      <span class="tag">Secure AI-Powered Energy Systems</span>
+    </div>
+  </section>
+
+  <section id="news" class="section">
     <h2>Highlights</h2>
-    <div class="news-scrollable">
-      <ul>
-        <li><strong>04/2026</strong> Two papers in watermarking and safety alignment for LLMs have been accepted by <strong>ACL 2026</strong>.</li>
-        <li><strong>03/2026</strong> Our paper in Adversarial attacks against audio recofnition systems has been accepted by <strong>ICME 2026</strong>.</li>
-        <li><strong>01/2026</strong> Our demo paper in CAPTCHA for modern web applications has been accepted by <strong>WWW 2026</strong>.</li>
-        <li><strong>11/2025</strong> Our paper in poisoning VideoLLMs has been accepted by <strong>AAAI 2026</strong>.</li>
-        <li><strong>07/2025</strong> Our paper in adversarial video defense has been accepted by <strong>RAID 2025</strong>.</li>
-        <li><strong>06/2025</strong> Our paper in hand biometric authentication has been accepted by <strong>IMWUT/UbiComp 2025</strong>.</li>
-        <li><strong>05/2025</strong> Our paper in adversarial defense for point cloud classification has been accepted by <strong>IEEE ICRA 2025</strong>.</li>
-        <li><strong>06/2024</strong> My first work on adversarial attacks/defense in AI has been accepted by <strong>USENIX Security 2024</strong>.</li>
-        <li><strong>03/2024</strong> One paper "VibMilk: Non-Intrusive Milk Spoilage Detection via Smartphone Vibration" has been accepted by <strong>IEEE IoTJ 2024</strong>. </li>
-        <li><strong>01/2024</strong> One paper "CAvatar: Real-time Human Activity Mesh Reconstruction via Tactile Carpets" has been accepted by <strong>IMWUT/UbiComp 2024</strong>. </li>
-      </ul>
-    </div>
-</div>
-
-<div id="publications" class="publication-container">
-  <h2>Selected Publications</h2>
-  <p style="font-size: 14px; color: #666; margin-top: 5px; margin-bottom: 20px;"><span style="font-size: 18px;">*</span>Equal contribution</p>
-
-  <div class="year-header">2026</div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>Train in Vain: Functionality-Preserving Poisoning to Prevent Unauthorized Use of Code Datasets</strong></p>
-      <p>Yuan Xiao; Yuchen Chen; Jiaming Wang; <strong><u>Wei Song</u></strong>; Jun Sun; Shiqing Ma; Yanzhou Mu; Juan Zhai; Chunrong Fang; Jin Song Dong; Zhenyu Chen</p>
-      <p class="publication-conference"><strong>ACL 2026</strong> <a href="">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>Debiasing LLMs by Masking Unfairness-Driving Attention Heads</strong></p>
-      <p>Tingxu Han; <strong><u>Wei Song</u></strong>; Ziqi Ding; Ziming Li; Chunrong Fang; Yuekang Li; Dongfang Liu; Zhenyu Chen; Zhenting Wang</p>
-      <p class="publication-conference"><strong>ACL 2026</strong> <a href="https://arxiv.org/pdf/2510.10142">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>DUAP: Dual-task Universal Adversarial Perturbations Against Voice Control Systems</strong></p>
-      <p>Suyang Sun; Weifei Jin; Yuxin Cao; <strong><u>Wei Song</u></strong>; Jie Hao</p>
-      <p class="publication-conference"><strong>ICME 2026</strong> <a href="https://arxiv.org/pdf/2601.12786">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>Robust CAPTCHA Using Audio Illusions in the Era of Large Language Models: from Evaluation to Advances</strong></p>
-      <p>Ziqi Ding; Yunfeng Wang; <strong><u>Wei Song</u></strong>; Yi Liu; Gelei Deng; Nan Sun; Huadong Mo; Jingling Xue; Shidong Pan;Yuekang Li</p>
-      <p class="publication-conference"><strong>arXiv</strong> <a href="https://arxiv.org/pdf/2601.08516">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>NgCaptcha: A CAPTCHA Bridging the Past and the Future</strong></p>
-      <p>Ziqi Ding; Shangzhi Xu; <strong><u>Wei Song</u></strong>; Yuekang Li</p>
-      <p class="publication-conference"><strong>WWW (2026) Demo</strong> <a href="https://arxiv.org/abs/2512.16223">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>Failures to Surface Harmful Contents in Video Large Language Models</strong></p>
-      <p>Yuxin Cao; <strong><u>Wei Song</u></strong>; Derui Wang; Jingling Xue; Jin Song Dong</p>
-      <p class="publication-conference"><strong>AAAI (2026)</strong> <a href="https://arxiv.org/pdf/2508.10974">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="year-header">2025</div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>ViDToken: A Video-Transformer-Based Latent
-        Token Defense for Adversarial Video Detection</strong></p>
-      <p><strong><u>Wei Song</u></strong>; Zhenchang Xing; Liming Zhu; Yulei Sui; Jingling Xue</p>
-      <p class="publication-conference"><strong>RAID (2025)</strong> <a href="xxx">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>Poisoning Prompt-Guided Sampling in Video Large Language Models</strong></p>
-      <p>Yuxin Cao; <strong><u>Wei Song</u></strong>; Jingling Xue; Jin Song Dong</p>
-      <p class="publication-conference"><strong>arXiv</strong> <a href="https://arxiv.org/pdf/2509.20851">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>Help or Hurdle? Rethinking Model Context Protocol-Augmented Large Language Models</strong></p>
-      <p><strong><u>Wei Song</u></strong>; Haonan Zhong; Ziqi Ding;Jingling Xue; Yuekang Li</p>
-      <p class="publication-conference"><strong>arXiv</strong> <a href="https://arxiv.org/pdf/2508.12566">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>HandID: Towards Unobtrusive Gesture-independent User Authentication on Smartphones Using Vibration-based Hand Biometrics</strong></p>
-      <p>Yuezhong Wu<sup>*</sup>; <strong><u>Wei Song</u></strong><sup>*</sup>; Chun Tung Chou; Jiankun Hu; Wen Hu</p>
-      <p class="publication-conference"><strong>IMWUT/UbiComp (2025)</strong> <a href="https://dl.acm.org/doi/abs/10.1145/3729489">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>SynerGuard: A Robust Framework for Point Cloud Classification via Local Geometry and Spatial Topology</strong></p>
-      <p>Haonan Zhong; <strong><u>Wei Song</u></strong>; Maurice Pagnucco; Yang Song</p>
-      <p class="publication-conference"><strong>IEEE ICRA (2025)</strong> <a href="https://ieeexplore.ieee.org/abstract/document/11127583">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="year-header">2024</div>
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>Correction-based Defense Against Adversarial Video Attacks via
-        Discretization-Enhanced Video Compressive Sensing</strong></p>
-      <p><strong><u>Wei Song</u></strong>; Cong Cong; Haonan Zhong; Jingling Xue</p>
-      <p class="publication-conference"><strong>USENIX Security (2024)</strong> <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/song-wei">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>VibMilk: Non-Intrusive Milk Spoilage Detection via Smartphone Vibration</strong></p>
-      <p>Yuezhong Wu; <strong>Wei Song</strong>; Yanxiang Wang; Dong Ma; Wen Hu</p>
-      <p class="publication-conference"><strong>IEEE IoTJ (2024)</strong> <a href="https://ieeexplore.ieee.org/abstract/document/10422771">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="publication-item">
-    <div class="publication-details">
-      <p><strong>CAvatar: Real-time Human Activity Mesh Reconstruction via Tactile Carpets</strong></p>
-      <p>Wenqiang Chen; Yexin Hu; <strong>Wei Song</strong>; Yingcheng Liu; Antonio Torralba; Wojciech Matusik</p>
-      <p class="publication-conference"><strong>IMWUT/UbiComp (2024)</strong> <a href="https://dl.acm.org/doi/abs/10.1145/3631424">[Paper]</a></p>
-    </div>
-  </div>
-
-  <div class="year-header">2022</div>
-  <div class="publication-last-item">
-    <div class="publication-details">
-      <p><strong>Pistis: Replay Attack and Liveness Detection for Gait-Based User Authentication System on Wearable Devices Using Vibration</strong></p>
-      <p><strong>Wei Song</strong>; Hong Jia; Min Wang; Yuezhong Wu; Wanli Xue; Chun Tung Chou; Jiankun Hu; Wen Hu</p>
-      <p class="publication-conference"><strong>IEEE IoTJ (2022)</strong> <a href="https://ieeexplore.ieee.org/abstract/document/9996544">[Paper]</a></p>
-    </div>
-  </div>
-
-</div>
-
-
-<!-- <div id="teaching" class="teaching-container">
-  <h2>Teaching</h2>
-  <ul>
-    <li>Academic tutor, COMP3331/9331 Computer Networks, UNSW, 2019-2024</li>
-    <li>Academic tutor, COMP9444 Deep Neural Networks, UNSW, 2022</li>
-    <li>Academic tutor, COMP4336/9336 Mobile Data Networking, UNSW, 2021</li>
-    <li>Academic tutor, COMP4337/9337 Securing Wireless and Wireless Networks, UNSW, 2021</li>
-    <li>Academic tutor, COMP6733 Internet of Things, UNSW, 2021</li>
-  </ul>
-</div> -->
-
-<div id="experience" class="experience-container">
-  <h2>Experience</h2>
-
-  <div class="subsection">
-    <h3>Professional Experience</h3>
     <ul>
-      <li>Jan 2022 - May 2022, Software Engineer, <a href="https://parkingspotz.com/">Parking Spotz</a><br>
-          Mentor: Prof. <a href="https://research.unsw.edu.au/people/professor-wen-hu">Wen Hu</a>
-      </li>
-      <li>Dec 2020 - May 2021, Student Research Assistant, UNSW Cyber Security Cooperative Research Center <br>
-          Supervisor: Prof. <a href="https://www.unsw.edu.au/staff/salil-kanhere">Salil Kanhere</a> and Prof. <a href="https://sites.google.com/view/profsanjayjha">Sanjay Jha</a>
-      </li>
+      <li><strong>April 2026:</strong> Two papers accepted at ACL 2026 (watermarking and safety alignment).</li>
+      <li><strong>March 2026:</strong> One paper accepted at ICME 2026 on adversarial attacks against audio recognition systems.</li>
+      <li><strong>January 2026:</strong> NgCaptcha accepted at WWW 2026 (Demo Track).</li>
+      <li><strong>November 2025:</strong> Paper on poisoning VideoLLMs accepted at AAAI 2026.</li>
+      <li><strong>July 2025:</strong> ViDToken accepted at RAID 2025.</li>
+      <li><strong>June 2024:</strong> First major AI security work accepted at USENIX Security 2024.</li>
     </ul>
-  </div>
+  </section>
 
-  <div class="subsection">
-    <h3>Teaching</h3>
-    <ul>
-      <li>Academic tutor, COMP3331/9331 Computer Networks, UNSW, 2019-2024</li>
-      <li>Academic tutor, COMP9444 Deep Neural Networks, UNSW, 2022</li>
-      <li>Academic tutor, COMP4336/9336 Mobile Data Networking, UNSW, 2021</li>
-      <li>Academic tutor, COMP4337/9337 Securing Wireless and Wireless Networks, UNSW, 2021</li>
-      <li>Academic tutor, COMP6733 Internet of Things, UNSW, 2021</li>
-    </ul>
-  </div>
+  <section id="publications" class="section">
+    <h2>Selected Publications</h2>
 
-  <div class="subsection">
-    <h3>Academic Service</h3>
+    <div class="pub">
+      <div class="pub-title">Train in Vain: Functionality-Preserving Poisoning to Prevent Unauthorized Use of Code Datasets</div>
+      <div class="pub-meta">Yuan Xiao; Yuchen Chen; Jiaming Wang; <strong>Wei Song</strong>; et al.</div>
+      <div class="pub-venue">ACL Findings 2026 · <a href="#">Paper</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Debiasing LLMs by Masking Unfairness-Driving Attention Heads</div>
+      <div class="pub-meta">Tingxu Han; <strong>Wei Song</strong>; Ziqi Ding; et al.</div>
+      <div class="pub-venue">ACL Findings 2026 · <a href="https://arxiv.org/pdf/2510.10142">Paper</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">ViDToken: A Video-Transformer-Based Latent Token Defense for Adversarial Video Detection</div>
+      <div class="pub-meta"><strong>Wei Song</strong>; Zhenchang Xing; Liming Zhu; Yulei Sui; Jingling Xue</div>
+      <div class="pub-venue">RAID 2025 · <a href="#">Paper</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Correction-based Defense Against Adversarial Video Attacks via Discretization-Enhanced Video Compressive Sensing</div>
+      <div class="pub-meta"><strong>Wei Song</strong>; Cong Cong; Haonan Zhong; Jingling Xue</div>
+      <div class="pub-venue">USENIX Security 2024 · <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/song-wei">Paper</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">HandID: Unobtrusive Gesture-independent User Authentication on Smartphones Using Vibration-based Hand Biometrics</div>
+      <div class="pub-meta">Yuezhong Wu*; <strong>Wei Song*</strong>; Chun Tung Chou; Jiankun Hu; Wen Hu</div>
+      <div class="pub-venue">ACM IMWUT/UbiComp 2025 · <a href="https://dl.acm.org/doi/abs/10.1145/3729489">Paper</a></div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <h2>Experience</h2>
     <ul>
-      <li>2023 Reviewer: ACM SIGCOMM, IoTDI, ACM MobiSys, IEEE/ACM ASE</li>
-      <li>2022 Reviewer: IPSN, ACM Sensys</li>
-      <li>2021 Reviewer: ACM Sensys</li>
+      <li><strong>Postdoctoral Research Fellow</strong>, UNSW Sydney (Nov 2024 – Present). Research on secure and trustworthy AI-enabled multimodal systems; collaboration with Data61 on authenticity and copyright protection for AI-generated content.</li>
+      <li><strong>Tutor / Course Admin</strong>, UNSW Sydney (2019 – 2024). Delivered and administered 22 terms across networks, mobile networking, IoT, wireless security, and deep learning.</li>
+      <li><strong>Software Engineer</strong>, Parking Spotz (Jan 2022 – May 2022). Mobile application design and implementation for intelligent parking services.</li>
+      <li><strong>Research Assistant</strong>, UNSW/CSCRC (Dec 2020 – May 2021). Built secure and privacy-preserving mobile prototypes for health-related sensing applications.</li>
+      <li><strong>Professional Service</strong>. Reviewer for venues including ICLR, ICML, CVPR, AAAI, FSE, ASE, SIGCOMM, MobiSys, IoTDI, and IPSN; Artifact Evaluation Committee member for USENIX Security.</li>
     </ul>
-  </div>
+  </section>
 </div>
-
-
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-          });
-      });
-  });
-</script>
-
-</body>
-</html>
