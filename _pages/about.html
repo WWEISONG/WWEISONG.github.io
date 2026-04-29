@@ -146,19 +146,15 @@ h1 {
 }
 
 .interests {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1rem;
 }
 
-.interests span {
-  background: var(--surface-soft);
-  border: 1px solid #dbe5f1;
-  border-radius: 9px;
-  padding: 0.42rem 0.64rem;
+.interests li {
+  margin-bottom: 0.45rem;
+  color: #000000;
+  line-height: 1.5;
   font-size: 1em;
-  font-weight: 600;
-  color: #25415f;
 }
 
 .timeline {
@@ -282,14 +278,14 @@ h1 {
   <div class="section-grid">
     <section id="research" class="panel">
       <h2>Research Interests</h2>
-      <div class="interests">
-        <span>AI Systems Security</span>
-        <span>Trustworthy Media</span>
-        <span>Multimodal AI Safety</span>
-        <span>Adversarial Video Attacks and Defenses</span>
-        <span>Watermarking for AI-Generated Content</span>
-        <span>Secure AI-Powered Energy Systems</span>
-      </div>
+      <ul class="interests">
+        <li>AI Systems Security</li>
+        <li>Trustworthy Media</li>
+        <li>Multimodal AI Safety</li>
+        <li>Adversarial Video Attacks and Defenses</li>
+        <li>Watermarking for AI-Generated Content</li>
+        <li>Secure AI-Powered Energy Systems</li>
+      </ul>
     </section>
 
     <section id="news" class="panel">
