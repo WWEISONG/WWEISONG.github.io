@@ -7,262 +7,296 @@ redirect_from:
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap');
 
 :root {
-  --bg: #f4f7fb;
-  --paper: #ffffff;
-  --ink: #132033;
-  --muted: #4f6078;
-  --line: #dbe5f2;
-  --brand: #0d4a85;
-  --brand-2: #00a3a3;
-  --soft: #eaf2fb;
-}
-
-.page__content {
-  max-width: 1120px;
-  margin: 0 auto;
-  font-family: 'Manrope', sans-serif;
-  color: var(--ink);
+  --bg: #f2f5f9;
+  --surface: #ffffff;
+  --surface-soft: #f7f9fc;
+  --text: #11243b;
+  --muted: #53657d;
+  --line: #d8e2ef;
+  --brand: #0b4f88;
+  --accent: #14806f;
 }
 
 body {
-  background: radial-gradient(circle at 10% 10%, #eef4ff 0%, #f8fbff 45%, #f4f7fb 100%);
+  background:
+    radial-gradient(circle at 95% 0%, #e6f1ff 0%, rgba(230, 241, 255, 0) 45%),
+    radial-gradient(circle at 0% 100%, #eaf8f3 0%, rgba(234, 248, 243, 0) 35%),
+    var(--bg);
 }
 
-.home-wrap {
-  padding: 1rem 0 2rem;
+.page__content {
+  max-width: 1140px;
+  margin: 0 auto;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--text);
+}
+
+.profile-page {
+  padding: 1.2rem 0 2.2rem;
 }
 
 .hero {
-  background: linear-gradient(130deg, #ffffff 0%, #f4fbff 55%, #eef8f8 100%);
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  padding: 2rem;
-  box-shadow: 0 16px 40px rgba(12, 33, 66, 0.08);
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 170px 1fr;
   gap: 1.5rem;
-  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1.7rem;
+  box-shadow: 0 14px 36px rgba(14, 37, 66, 0.08);
 }
 
-.hero img {
-  width: 180px;
-  height: 180px;
+.hero-photo {
+  width: 170px;
+  height: 170px;
   object-fit: cover;
-  border-radius: 20px;
-  border: 4px solid #fff;
-  box-shadow: 0 12px 26px rgba(16, 58, 96, 0.2);
+  border-radius: 14px;
+  border: 3px solid #fff;
+  box-shadow: 0 10px 24px rgba(16, 49, 84, 0.2);
 }
 
 h1 {
-  font-family: 'Fraunces', serif;
-  font-size: 2.6rem;
-  line-height: 1.1;
   margin: 0;
+  font-family: 'Source Serif 4', serif;
+  font-size: 2.4rem;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
 }
 
 .role {
-  font-size: 1.1rem;
+  margin-top: 0.28rem;
   color: var(--brand);
   font-weight: 700;
-  margin-top: 0.35rem;
+  font-size: 1.05rem;
 }
 
-.bio {
-  margin-top: 1rem;
-  line-height: 1.75;
+.about p {
+  margin: 0.78rem 0 0;
   color: var(--muted);
+  line-height: 1.75;
+  font-size: 1.01rem;
 }
 
-.links {
-  display: flex;
-  gap: 0.65rem;
-  flex-wrap: wrap;
+.link-row {
   margin-top: 1rem;
-}
-
-.links a {
-  text-decoration: none;
-  color: var(--brand);
-  border: 1px solid #c9ddf4;
-  background: #f6fbff;
-  padding: 0.42rem 0.72rem;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.92rem;
-}
-
-.quick-grid {
-  margin-top: 1.2rem;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(120px, 1fr));
-  gap: 0.8rem;
-}
-
-.quick-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 0.8rem;
-}
-
-.quick-card strong {
-  display: block;
-  font-size: 1.2rem;
-  color: var(--brand);
-}
-
-.section {
-  margin-top: 1.6rem;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 1.35rem 1.4rem;
-}
-
-.section h2 {
-  font-family: 'Fraunces', serif;
-  font-size: 1.45rem;
-  margin: 0 0 1rem;
-}
-
-.tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem;
 }
 
-.tag {
-  background: linear-gradient(120deg, #eff6ff, #ebfbfb);
-  color: #24405f;
-  border: 1px solid #d4e5fb;
-  border-radius: 10px;
-  padding: 0.5rem 0.7rem;
+.link-row a {
+  text-decoration: none;
+  color: var(--brand);
+  background: #f3f8ff;
+  border: 1px solid #cfe0f5;
+  border-radius: 999px;
+  padding: 0.42rem 0.78rem;
+  font-size: 0.92rem;
   font-weight: 600;
-  font-size: 0.9rem;
 }
 
-#news ul, #experience ul {
+.section-grid {
+  margin-top: 1.35rem;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1rem;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.15rem 1.2rem;
+}
+
+.panel h2 {
+  margin: 0 0 0.8rem;
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.45rem;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.interests span {
+  background: var(--surface-soft);
+  border: 1px solid #dbe5f1;
+  border-radius: 9px;
+  padding: 0.42rem 0.64rem;
+  font-size: 0.89rem;
+  font-weight: 600;
+  color: #25415f;
+}
+
+.timeline {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: 1rem;
 }
 
-#news li, #experience li {
-  margin-bottom: 0.62rem;
+.timeline li {
+  margin-bottom: 0.52rem;
+  color: #2f435c;
   line-height: 1.55;
 }
 
-.pub {
-  padding: 0.85rem 0;
-  border-bottom: 1px dashed #dbe4f2;
+.publications .entry {
+  border-top: 1px solid #e3e9f2;
+  padding: 0.78rem 0 0;
+  margin-top: 0.78rem;
 }
 
-.pub:last-child { border-bottom: 0; }
+.publications .entry:first-child {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 0;
+}
 
-.pub-title { font-weight: 800; }
-.pub-meta { color: var(--muted); margin-top: 0.2rem; }
-.pub-venue { color: var(--brand); font-weight: 700; margin-top: 0.22rem; }
+.pub-title {
+  font-weight: 700;
+  color: #122a44;
+  line-height: 1.5;
+}
 
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero img { width: 140px; height: 140px; }
-  h1 { font-size: 2rem; }
-  .quick-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+.pub-authors {
+  color: var(--muted);
+  margin-top: 0.2rem;
+  line-height: 1.5;
+}
+
+.pub-venue {
+  margin-top: 0.2rem;
+  color: var(--brand);
+  font-weight: 700;
+}
+
+.pub-venue a {
+  color: var(--brand);
+}
+
+.experience ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.experience li {
+  margin-bottom: 0.62rem;
+  line-height: 1.58;
+  color: #2d425a;
+}
+
+@media (max-width: 940px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .section-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 
-<div class="home-wrap">
+<div class="profile-page">
   <section class="hero">
-    <img src="/images/profile.jpg" alt="Wei Song" />
+    <img class="hero-photo" src="/images/profile.jpg" alt="Wei Song" />
     <div>
       <h1>Wei Song</h1>
-      <div class="role">Postdoctoral Research Fellow · UNSW Sydney</div>
-      <div class="bio">
-        I work on AI systems security, trustworthy media, and multimodal AI safety. My research focuses on adversarial robustness, video/LLM safety, and deployable security technologies for real-world systems, including critical energy infrastructure.
+      <div class="role">Postdoctoral Research Fellow, UNSW Sydney</div>
+      <div class="about">
+        <p>I am a postdoctoral researcher working on the security, reliability, and real-world deployment of AI-enabled systems. My research focuses on AI systems security, trustworthy media, adversarial robustness, and multimodal model safety, especially for video intelligence and large language model ecosystems.</p>
+        <p>I collaborate with academic and industry partners to build practical technologies for content authenticity and model trustworthiness. Current work includes security and safety challenges in AI-generated media, robust multimodal reasoning, and secure AI-powered infrastructure for critical domains such as energy systems.</p>
+        <p>I also mentor PhD and Master's students and contribute to teaching and course administration across networking, IoT, wireless security, and deep learning at UNSW.</p>
       </div>
-      <div class="links">
+      <div class="link-row">
         <a href="mailto:wei.song1@unsw.edu.au">wei.song1@unsw.edu.au</a>
         <a href="https://scholar.google.com.au/citations?hl=en&user=HrA4BoYAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
         <a href="https://www.linkedin.com/in/wei-song-8956a9b3/">LinkedIn</a>
         <a href="/CV_Wei%20SONG.pdf">CV (PDF)</a>
       </div>
-      <div class="quick-grid">
-        <div class="quick-card"><strong>14+</strong> Publications</div>
-        <div class="quick-card"><strong>22</strong> Terms Teaching</div>
-        <div class="quick-card"><strong>2</strong> Active Grants</div>
-        <div class="quick-card"><strong>UNSW</strong> PhD (2024)</div>
+    </div>
+  </section>
+
+  <div class="section-grid">
+    <section id="research" class="panel">
+      <h2>Research Interests</h2>
+      <div class="interests">
+        <span>AI Systems Security</span>
+        <span>Trustworthy Media</span>
+        <span>Multimodal AI Safety</span>
+        <span>Adversarial Video Attacks and Defenses</span>
+        <span>Watermarking for AI-Generated Content</span>
+        <span>Secure AI-Powered Energy Systems</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="research" class="section">
-    <h2>Research Interests</h2>
-    <div class="tag-list">
-      <span class="tag">AI Systems Security</span>
-      <span class="tag">Trustworthy Media</span>
-      <span class="tag">Multimodal AI Safety</span>
-      <span class="tag">Adversarial Video Attacks & Defenses</span>
-      <span class="tag">Watermarking for AI-Generated Content</span>
-      <span class="tag">Secure AI-Powered Energy Systems</span>
-    </div>
-  </section>
+    <section id="news" class="panel">
+      <h2>Highlights</h2>
+      <ul class="timeline">
+        <li><strong>Apr 2026:</strong> Two papers accepted at ACL 2026.</li>
+        <li><strong>Mar 2026:</strong> Paper accepted at ICME 2026.</li>
+        <li><strong>Jan 2026:</strong> NgCaptcha accepted at WWW 2026 (Demo).</li>
+        <li><strong>Nov 2025:</strong> VideoLLM poisoning paper accepted at AAAI 2026.</li>
+        <li><strong>Jul 2025:</strong> ViDToken accepted at RAID 2025.</li>
+      </ul>
+    </section>
+  </div>
 
-  <section id="news" class="section">
-    <h2>Highlights</h2>
-    <ul>
-      <li><strong>April 2026:</strong> Two papers accepted at ACL 2026 (watermarking and safety alignment).</li>
-      <li><strong>March 2026:</strong> One paper accepted at ICME 2026 on adversarial attacks against audio recognition systems.</li>
-      <li><strong>January 2026:</strong> NgCaptcha accepted at WWW 2026 (Demo Track).</li>
-      <li><strong>November 2025:</strong> Paper on poisoning VideoLLMs accepted at AAAI 2026.</li>
-      <li><strong>July 2025:</strong> ViDToken accepted at RAID 2025.</li>
-      <li><strong>June 2024:</strong> First major AI security work accepted at USENIX Security 2024.</li>
-    </ul>
-  </section>
-
-  <section id="publications" class="section">
+  <section id="publications" class="panel publications" style="margin-top: 1rem;">
     <h2>Selected Publications</h2>
 
-    <div class="pub">
+    <div class="entry">
       <div class="pub-title">Train in Vain: Functionality-Preserving Poisoning to Prevent Unauthorized Use of Code Datasets</div>
-      <div class="pub-meta">Yuan Xiao; Yuchen Chen; Jiaming Wang; <strong>Wei Song</strong>; et al.</div>
-      <div class="pub-venue">ACL Findings 2026 · <a href="#">Paper</a></div>
+      <div class="pub-authors">Yuan Xiao; Yuchen Chen; Jiaming Wang; <strong>Wei Song</strong>; et al.</div>
+      <div class="pub-venue">ACL Findings 2026</div>
     </div>
 
-    <div class="pub">
+    <div class="entry">
       <div class="pub-title">Debiasing LLMs by Masking Unfairness-Driving Attention Heads</div>
-      <div class="pub-meta">Tingxu Han; <strong>Wei Song</strong>; Ziqi Ding; et al.</div>
+      <div class="pub-authors">Tingxu Han; <strong>Wei Song</strong>; Ziqi Ding; et al.</div>
       <div class="pub-venue">ACL Findings 2026 · <a href="https://arxiv.org/pdf/2510.10142">Paper</a></div>
     </div>
 
-    <div class="pub">
+    <div class="entry">
       <div class="pub-title">ViDToken: A Video-Transformer-Based Latent Token Defense for Adversarial Video Detection</div>
-      <div class="pub-meta"><strong>Wei Song</strong>; Zhenchang Xing; Liming Zhu; Yulei Sui; Jingling Xue</div>
-      <div class="pub-venue">RAID 2025 · <a href="#">Paper</a></div>
+      <div class="pub-authors"><strong>Wei Song</strong>; Zhenchang Xing; Liming Zhu; Yulei Sui; Jingling Xue</div>
+      <div class="pub-venue">RAID 2025</div>
     </div>
 
-    <div class="pub">
+    <div class="entry">
       <div class="pub-title">Correction-based Defense Against Adversarial Video Attacks via Discretization-Enhanced Video Compressive Sensing</div>
-      <div class="pub-meta"><strong>Wei Song</strong>; Cong Cong; Haonan Zhong; Jingling Xue</div>
+      <div class="pub-authors"><strong>Wei Song</strong>; Cong Cong; Haonan Zhong; Jingling Xue</div>
       <div class="pub-venue">USENIX Security 2024 · <a href="https://www.usenix.org/conference/usenixsecurity24/presentation/song-wei">Paper</a></div>
     </div>
 
-    <div class="pub">
+    <div class="entry">
       <div class="pub-title">HandID: Unobtrusive Gesture-independent User Authentication on Smartphones Using Vibration-based Hand Biometrics</div>
-      <div class="pub-meta">Yuezhong Wu*; <strong>Wei Song*</strong>; Chun Tung Chou; Jiankun Hu; Wen Hu</div>
+      <div class="pub-authors">Yuezhong Wu*; <strong>Wei Song*</strong>; Chun Tung Chou; Jiankun Hu; Wen Hu</div>
       <div class="pub-venue">ACM IMWUT/UbiComp 2025 · <a href="https://dl.acm.org/doi/abs/10.1145/3729489">Paper</a></div>
     </div>
   </section>
 
-  <section id="experience" class="section">
+  <section id="experience" class="panel experience" style="margin-top: 1rem;">
     <h2>Experience</h2>
     <ul>
-      <li><strong>Postdoctoral Research Fellow</strong>, UNSW Sydney (Nov 2024 – Present). Research on secure and trustworthy AI-enabled multimodal systems; collaboration with Data61 on authenticity and copyright protection for AI-generated content.</li>
-      <li><strong>Tutor / Course Admin</strong>, UNSW Sydney (2019 – 2024). Delivered and administered 22 terms across networks, mobile networking, IoT, wireless security, and deep learning.</li>
-      <li><strong>Software Engineer</strong>, Parking Spotz (Jan 2022 – May 2022). Mobile application design and implementation for intelligent parking services.</li>
-      <li><strong>Research Assistant</strong>, UNSW/CSCRC (Dec 2020 – May 2021). Built secure and privacy-preserving mobile prototypes for health-related sensing applications.</li>
-      <li><strong>Professional Service</strong>. Reviewer for venues including ICLR, ICML, CVPR, AAAI, FSE, ASE, SIGCOMM, MobiSys, IoTDI, and IPSN; Artifact Evaluation Committee member for USENIX Security.</li>
+      <li><strong>Postdoctoral Research Fellow</strong>, UNSW Sydney (Nov 2024 - Present). AI-enabled systems security, trustworthy media, multimodal safety, and collaboration with Data61.</li>
+      <li><strong>Tutor / Course Admin</strong>, UNSW Sydney (2019 - 2024). 22 terms across computer networks, IoT, mobile networking, wireless security, and deep learning.</li>
+      <li><strong>Software Engineer</strong>, Parking Spotz (Jan 2022 - May 2022). Mobile application design and implementation for intelligent parking systems.</li>
+      <li><strong>Research Assistant</strong>, UNSW/CSCRC (Dec 2020 - May 2021). Developed secure and privacy-preserving mobile prototype systems.</li>
+      <li><strong>Professional Service</strong>. Reviewer for ICLR, ICML, CVPR, AAAI, FSE, ASE, SIGCOMM, MobiSys, IoTDI, and IPSN; Artifact Evaluation Committee member for USENIX Security.</li>
     </ul>
   </section>
 </div>
