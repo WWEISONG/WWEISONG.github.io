@@ -50,7 +50,7 @@ body {
 
 .hero {
   display: grid;
-  grid-template-columns: 170px 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 1.5rem;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -66,6 +66,13 @@ body {
   border-radius: 14px;
   border: 3px solid #fff;
   box-shadow: 0 10px 24px rgba(16, 49, 84, 0.2);
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: flex-start;
 }
 
 h1 {
@@ -111,7 +118,7 @@ h1 {
 .section-grid {
   margin-top: 1.35rem;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
@@ -222,20 +229,20 @@ h1 {
 
 <div class="profile-page">
   <section class="hero">
-    <img class="hero-photo" src="/images/profile.jpg" alt="Wei Song" />
+    <div class="hero-left">
+      <img class="hero-photo" src="/images/profile.jpg" alt="Wei Song" />
+      <div class="link-row">
+        <a href="mailto:wei.song1@unsw.edu.au">wei.song1@unsw.edu.au</a>
+        <a href="https://scholar.google.com.au/citations?hl=en&user=HrA4BoYAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/wei-song-8956a9b3/">LinkedIn</a>
+      </div>
+    </div>
     <div>
       <h1>Wei Song</h1>
       <div class="role">Postdoctoral Research Fellow, UNSW Sydney</div>
       <div class="about">
         <p>I am a postdoctoral researcher working on the security, reliability, and real-world deployment of AI-enabled systems. My research focuses on AI systems security, trustworthy media, adversarial robustness, and multimodal model safety, especially for video intelligence and large language model ecosystems.</p>
         <p>I collaborate with academic and industry partners to build practical technologies for content authenticity and model trustworthiness. Current work includes security and safety challenges in AI-generated media, robust multimodal reasoning, and secure AI-powered infrastructure for critical domains such as energy systems.</p>
-        <p>I also mentor PhD and Master's students and contribute to teaching and course administration across networking, IoT, wireless security, and deep learning at UNSW.</p>
-      </div>
-      <div class="link-row">
-        <a href="mailto:wei.song1@unsw.edu.au">wei.song1@unsw.edu.au</a>
-        <a href="https://scholar.google.com.au/citations?hl=en&user=HrA4BoYAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>
-        <a href="https://www.linkedin.com/in/wei-song-8956a9b3/">LinkedIn</a>
-        <a href="/CV_Wei%20SONG.pdf">CV (PDF)</a>
       </div>
     </div>
   </section>
@@ -376,23 +383,6 @@ h1 {
       <div class="pub-venue">ACM MobiCom 2022 Poster · <a href="https://doi.org/10.1145/3495243.3558257">Paper</a></div>
     </div>
 
-    <div class="entry">
-      <div class="pub-title">Soil Moisture Sensing with mmWave Radar</div>
-      <div class="pub-authors">Wenqiang Chen; Yunkai Feng; Michael Cardamis; Chao Jiang; <strong>Wei Song</strong>; Oula Ghannoum; Wen Hu</div>
-      <div class="pub-venue">MMNets @ MobiCom 2022 · <a href="https://doi.org/10.1145/3555077.3556472">Paper</a></div>
-    </div>
-
-    <div class="entry">
-      <div class="pub-title">Towards Privacy-preserving Digital Contact Tracing</div>
-      <div class="pub-authors">Noman Ahmed; Rafael A. Michelin; Wanli Xue; Gede D. Putra; <strong>Wei Song</strong>; Sushmita Ruj; Salil S. Kanhere; Sanjay Jha</div>
-      <div class="pub-venue">IEEE ICBC 2021 · <a href="https://doi.org/10.1109/ICBC51069.2021.9461052">Paper</a></div>
-    </div>
-
-    <div class="entry">
-      <div class="pub-title">Pre-computed Region Guardian Sets Based Reverse kNN Queries</div>
-      <div class="pub-authors"><strong>Wei Song</strong>; J. Qin; Muhammad Aamir Cheema; Wei Wang</div>
-      <div class="pub-venue">Data Science and Engineering 2016 · <a href="https://doi.org/10.1007/s41019-016-0027-8">Paper</a></div>
-    </div>
   </section>
 
   <section id="experience" class="panel experience" style="margin-top: 1rem;">
@@ -402,7 +392,14 @@ h1 {
       <li><strong>Tutor / Course Admin</strong>, UNSW Sydney (2019 - 2024). 22 terms across computer networks, IoT, mobile networking, wireless security, and deep learning.</li>
       <li><strong>Software Engineer</strong>, Parking Spotz (Jan 2022 - May 2022). Mobile application design and implementation for intelligent parking systems.</li>
       <li><strong>Research Assistant</strong>, UNSW/CSCRC (Dec 2020 - May 2021). Developed secure and privacy-preserving mobile prototype systems.</li>
-      <li><strong>Professional Service</strong>. Reviewer for ICLR, ICML, CVPR, AAAI, FSE, ASE, SIGCOMM, MobiSys, IoTDI, and IPSN; Artifact Evaluation Committee member for USENIX Security.</li>
+    </ul>
+  </section>
+
+  <section id="service" class="panel experience" style="margin-top: 1rem;">
+    <h2>Professional Service</h2>
+    <ul>
+      <li>Reviewer for ICLR, ICML, CVPR, AAAI, FSE, ASE, SIGCOMM, MobiSys, IoTDI, and IPSN.</li>
+      <li>Artifact Evaluation Committee member for USENIX Security.</li>
     </ul>
   </section>
 </div>
