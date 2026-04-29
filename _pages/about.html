@@ -105,19 +105,24 @@ h1 {
 .link-row {
   margin-top: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .link-row a {
   text-decoration: none;
   color: var(--brand);
-  background: #f3f8ff;
-  border: 1px solid #cfe0f5;
-  border-radius: 999px;
-  padding: 0.42rem 0.78rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.link-row a:hover {
+  text-decoration: underline;
 }
 
 .section-grid {
