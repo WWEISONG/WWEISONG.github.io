@@ -40,6 +40,56 @@ redirect_from:
   .masthead__inner-wrap { max-width: 1620px; }
 }
 
+/* --- Top navigation bar -------------------------------------------
+   The theme's masthead is position:fixed at 70px, with body padding-top
+   matching it. Slimmed to 58px, so the body padding moves in step. */
+.masthead {
+  height: 58px;
+  background: #1b2733;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  box-shadow: 0 1px 14px rgba(12,20,28,.16);
+}
+body { padding-top: 58px; }
+.masthead__inner-wrap { height: 58px; padding-top: 0; padding-bottom: 0; }
+.greedy-nav { background: transparent; height: 58px; }
+.greedy-nav .visible-links { display: table; height: 58px; }
+
+/* Name: serif, to set it apart from the sans links and the page body */
+.masthead__menu-item--lg { padding-right: 2.6em; }
+.greedy-nav .visible-links li:first-child a {
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  font-size: 18px; font-weight: 600; letter-spacing: .2px;
+  text-transform: none; color: #fff;
+}
+
+/* Section links: small uppercase sans */
+.greedy-nav a {
+  margin: 0 .85rem;
+  font-size: 12px; font-weight: 600; letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.66);
+  transition: color .18s ease;
+}
+.greedy-nav a:hover { color: #fff; }
+.greedy-nav .visible-links a:before {
+  height: 2px; bottom: -7px; background: #ff6b6b;
+}
+
+/* Collapsed menu on narrow screens */
+.greedy-nav button { height: 58px; background: transparent; }
+.greedy-nav .hidden-links {
+  background: #22303c; border-color: rgba(255,255,255,.14);
+  box-shadow: 0 6px 18px rgba(12,20,28,.3);
+}
+.greedy-nav .hidden-links a { color: rgba(255,255,255,.8); font-size: 12px; }
+.greedy-nav .hidden-links a:hover { color: #fff; background: rgba(255,255,255,.09); }
+.greedy-nav .hidden-links li { border-bottom-color: rgba(255,255,255,.09); }
+.greedy-nav .hidden-links:before { border-color: rgba(255,255,255,.14) transparent; }
+.greedy-nav .hidden-links:after { border-color: #22303c transparent; }
+
+/* Keep anchored sections clear of the fixed bar */
+.ws-section, .ws-profile { scroll-margin-top: 74px; }
+
 .ws-home {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   color: #2f3337;
@@ -307,8 +357,14 @@ redirect_from:
     <p class="ws-note">(<sup>#</sup> Equal contribution, &nbsp;<sup>*</sup> Corresponding author. My name is <span class="ws-me">underlined</span>.)</p>
 
     <details class="ws-pub-year" open>
-      <summary>2026 <span class="ws-sup-count">(6)</span></summary>
+      <summary>2026 <span class="ws-sup-count">(7)</span></summary>
       <ul class="ws-pub-list">
+        <li>
+          <span class="ws-pub-title">RamFuzz: LLM-Guided Greybox Fuzzing for Spatial Memory Corruption via Valid Range Violation</span>
+          <span class="ws-badge">CORE A*</span>
+          <br><span class="ws-authors">Shangzhi Xu, <span class="ws-me">Wei Song</span>, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>, <a href="https://www.unsw.edu.au/staff/nan-sun">Nan Sun</a>, Muhammad Ejaz Ahmed, Willy Susilo, <a href="https://www.unsw.edu.au/staff/benjamin-turnbull">Benjamin Turnbull</a>, <a href="https://jumormt.github.io/">Xiao Cheng</a><sup>*</sup>, <a href="https://siqima.me/">Siqi Ma</a><sup>*</sup>.</span>
+          <br><span class="ws-pub-venue">ASE '26</span>
+        </li>
         <li>
           <span class="ws-pub-title">NgCaptcha: A CAPTCHA Bridging the Past and the Future</span>
           <br><span class="ws-authors">Ziqi Ding, Shangzhi Xu, <span class="ws-me">Wei Song</span>, <a href="https://thepatrickstar.github.io/">Yuekang Li</a>.</span>
@@ -515,16 +571,16 @@ redirect_from:
     <details class="ws-sup-group" open>
       <summary>PhD Students <span class="ws-sup-count">(3)</span></summary>
       <ul>
-        <li><strong>Yuxin Cao</strong> (PhD at National University of Singapore) &mdash; safety evaluation of Video LLMs.</li>
+        <li><strong><a href="https://yuxincao22.github.io/">Yuxin Cao</a></strong> (PhD at National University of Singapore) &mdash; safety evaluation of Video LLMs.</li>
         <li><strong>Bangshuo Zhu</strong> (PhD at UNSW Sydney) &mdash; robust and trustworthy defense methods for Video LLMs.</li>
-        <li><strong>Haonan Zhong</strong> (PhD at UNSW Sydney) &mdash; safety alignment of large language models for trustworthy deployment.</li>
+        <li><strong><a href="https://scholar.google.com/citations?user=EljtzZkAAAAJ&hl=en">Haonan Zhong</a></strong> (PhD at UNSW Sydney) &mdash; safety alignment of large language models for trustworthy deployment.</li>
       </ul>
     </details>
 
     <details class="ws-sup-group" open>
       <summary>Master's Students <span class="ws-sup-count">(3)</span></summary>
       <ul>
-        <li><strong>Ziqi Ding</strong> (UNSW Sydney) &mdash; next-generation CAPTCHA design for secure and usable authentication.</li>
+        <li><strong><a href="https://scholar.google.com/citations?user=NpkIDWgAAAAJ&hl=en">Ziqi Ding</a></strong> (UNSW Sydney) &mdash; next-generation CAPTCHA design for secure and usable authentication.</li>
         <li><strong>Yingbo Xie</strong> (Fuzhou University) &mdash; adversarial attacks and defenses for robust gait recognition.</li>
         <li><strong>Peng Yang</strong> (Fuzhou University) &mdash; reliability and failure analysis of Video LLMs.</li>
       </ul>
